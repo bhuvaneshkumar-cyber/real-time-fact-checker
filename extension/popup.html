@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Fact Checker</title>
+    <style>
+        body {
+            width: 250px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 15px;
+            background-color: #1e1e1e;
+        }
+        h1 {
+            color: #4fc3f7;
+            text-align: center;
+            font-size: 22px;
+            margin-top: 5px;
+        }
+        p {
+            color: #ccc;
+            font-size: 14px;
+            text-align: center;
+        }
+        .status {
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            text-align: center;
+            color: #fff;
+        }
+        .status.online { color: #a8e6cf; }
+        .status.offline { color: #f8d7da; }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background: rgba(79, 195, 247, 0.2);
+            border: 1px solid rgba(79, 195, 247, 0.3);
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background 0.2s ease;
+        }
+        button:hover {
+            background: rgba(79, 195, 247, 0.4);
+        }
+        
+        /* Make the start button pop a bit more */
+        .btn-primary {
+            background: rgba(40, 167, 69, 0.2);
+            border: 1px solid rgba(40, 167, 69, 0.4);
+            color: #a8e6cf;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background: rgba(40, 167, 69, 0.4);
+        }
+
+        button:last-child {
+            margin-bottom: 0; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Fact Checker</h1>
+    <p>Real-time fact-checking for YouTube and web audio.</p>
+    
+    <div class="status" id="status">Checking connection...</div>
+    
+    <button id="startCapture" class="btn-primary">Start Listening to Tab</button>
+    
+    <button id="checkBackend">Check Backend</button>
+    <button id="optionsBtn">Options</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
